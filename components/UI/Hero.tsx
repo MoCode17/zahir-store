@@ -1,5 +1,5 @@
 import React from "react";
-import heroImg1 from "@/public/hero1.png"; // Adjust the path as necessary
+import heroImg1 from "@/public/hero2.png"; // Adjust the path as necessary
 import Image from "next/image";
 
 export default function Hero() {

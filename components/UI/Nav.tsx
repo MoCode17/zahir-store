@@ -1,7 +1,7 @@
 import React from "react";
 import Link from "next/link";
 import Image from "next/image";
-import logo from "@/public/logo1.png";
+import logo from "@/public/logo.png";
 import { Menu } from "lucide-react";
 import { ShoppingCart } from "lucide-react";
 
