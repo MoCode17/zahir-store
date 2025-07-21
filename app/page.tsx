@@ -1,8 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Nav } from "@/components/Navigation/Nav";
 import Hero from "@/components/UI/Hero";
-import { CategoriesSection } from "@/components/Sections/Categories";
+import { Categories } from "@/components/Sections/Categories";
 import { Button } from "@/components/UI/Button";
+import { Featured } from "@/components/Sections/Featured";
 
 export default function HomePage() {
   return (
@@ -11,39 +12,10 @@ export default function HomePage() {
       <Hero />
 
       {/* Categories Section */}
-      <CategoriesSection />
+      <Categories />
 
       {/* Featured Products Section */}
-      <section className="py-16 px-4 bg-white">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold text-gray-900 mb-4">
-              Featured Watches
-            </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-              Handpicked timepieces that represent the pinnacle of watchmaking
-              excellence and style.
-            </p>
-          </div>
-
-          {/* Products grid would go here */}
-          <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6">
-            {/* This would be populated with ProductCard components */}
-            <div className="bg-gray-100 aspect-square rounded-xl flex items-center justify-center">
-              <span className="text-gray-500">Product Card 1</span>
-            </div>
-            <div className="bg-gray-100 aspect-square rounded-xl flex items-center justify-center">
-              <span className="text-gray-500">Product Card 2</span>
-            </div>
-            <div className="bg-gray-100 aspect-square rounded-xl flex items-center justify-center">
-              <span className="text-gray-500">Product Card 3</span>
-            </div>
-            <div className="bg-gray-100 aspect-square rounded-xl flex items-center justify-center">
-              <span className="text-gray-500">Product Card 4</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <Featured />
 
       {/* Newsletter Section */}
       <section className="py-16 px-4 bg-[#54318c] text-white">

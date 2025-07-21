@@ -53,7 +53,7 @@ const categories: Category[] = [
   },
 ];
 
-export const CategoriesSection: React.FC = () => {
+export const Categories: React.FC = () => {
   return (
     <section className="py-16 px-4 bg-gray-50">
       <div className="max-w-7xl mx-auto">
@@ -91,7 +91,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
 
         {/* Content */}
         <div className="absolute inset-0 flex justify-center items-center p-6">
-          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#54318c] transition-colors text-center">
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#fdc500] transition-colors text-center">
             {category.title}
           </h3>
         </div>
@@ -101,7 +101,7 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
           <Button
             variant="outline"
             size="sm"
-            className="w-full group-hover:bg-[#54318c] group-hover:text-white group-hover:border-[#54318c] transition-all duration-200"
+            className="w-full group-hover:bg-[#fdc500] group-hover:text-white group-hover:border-[#fdc500] transition-all duration-200"
           >
             {category.title} Watches
           </Button>

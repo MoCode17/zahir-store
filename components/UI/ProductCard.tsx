@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "./Button";
 import { Heart, ShoppingCart, Star } from "lucide-react";
 
-interface Product {
+export interface Product {
   id: string;
   name: string;
   price: number;
