@@ -24,7 +24,7 @@ export const Button: React.FC<ButtonProps> = ({
       case "secondary":
         return "bg-gray-200 hover:bg-gray-300 text-gray-900 border-transparent";
       case "outline":
-        return "bg-transparent hover:bg-[#54318c] text-[#54318c] hover:text-white border-[#54318c]";
+        return "bg-transparent hover:bg-[#fdc500] text-[#fdc500] hover:text-white border-[#fdc500]";
       default:
         return "bg-[#54318c] hover:bg-[#432269] text-white border-transparent";
     }
@@ -48,7 +48,7 @@ export const Button: React.FC<ButtonProps> = ({
       className={`
         inline-flex items-center justify-center
         border font-medium
-        transition-colors duration-200
+        transition-colors duration-200 hover:cursor-pointer
         disabled:opacity-50 disabled:cursor-not-allowed
         ${getVariantClasses()}
         ${getSizeClasses()}

@@ -44,7 +44,7 @@ const categories: Category[] = [
   },
   {
     id: "4",
-    title: "Smart Watches",
+    title: "Smart",
     description: "Technology meets tradition in perfect harmony",
     icon: <Smartphone size={32} />,
     href: "/collections/smart",
@@ -59,14 +59,7 @@ export const CategoriesSection: React.FC = () => {
       <div className="max-w-7xl mx-auto">
         {/* Section Header */}
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-gray-900 mb-4">
-            Shop by Category
-          </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-            Discover the perfect watch for every occasion. From luxury
-            timepieces to smart technology, find your style in our carefully
-            curated collections.
-          </p>
+          <h2 className="text-4xl font-bold text-gray-900 mb-4">Categories</h2>
         </div>
 
         {/* Categories Grid */}
@@ -86,49 +79,49 @@ interface CategoryCardProps {
 
 const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
   return (
-    <div className="group relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
-      {/* Background Image Placeholder */}
-      <div
-        className={`h-48 bg-gradient-to-br ${category.gradient} relative overflow-hidden`}
-      >
-        {/* Icon Overlay */}
-        <div className="absolute inset-0 flex items-center justify-center text-white opacity-20">
-          {category.icon}
-        </div>
+    <div className="group relative">
+      <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+        {/* Background Image Placeholder */}
+        <div
+          className={`h-48 bg-gradient-to-br ${category.gradient} relative overflow-hidden`}
+        >
+          {/* Icon Overlay */}
+          <div className="absolute inset-0 flex items-center justify-center text-white opacity-20">
+            {category.icon}
+          </div>
 
-        {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-black bg-opacity-20"></div>
+          {/* Gradient Overlay */}
+          <div className="absolute inset-0 bg-black/20"></div>
 
-        {/* Category Icon 
+          {/* Category Icon 
         <div className="absolute top-4 left-4 p-3 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg text-white">
           {React.cloneElement(category.icon as React.ReactElement, {
             size: 24,
           })}
         </div>*/}
+        </div>
+
+        {/* Content */}
+        <div className="p-6">
+          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#54318c] transition-colors">
+            {category.title}
+          </h3>
+          <p className="text-gray-600 text-sm mb-4 leading-relaxed">
+            {category.description}
+          </p>
+        </div>
       </div>
-
-      {/* Content */}
-      <div className="p-6">
-        <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#54318c] transition-colors">
-          {category.title}
-        </h3>
-        <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-          {category.description}
-        </p>
-
+      <div className="mt-4">
         <Link href={category.href}>
           <Button
             variant="outline"
             size="sm"
             className="w-full group-hover:bg-[#54318c] group-hover:text-white group-hover:border-[#54318c] transition-all duration-200"
           >
-            Shop Now
+            {category.title} Watches
           </Button>
         </Link>
       </div>
-
-      {/* Hover Effect */}
-      <div className="absolute inset-0 bg-[#54318c] bg-opacity-0 group-hover:bg-opacity-5 transition-all duration-300 pointer-events-none"></div>
     </div>
   );
 };
