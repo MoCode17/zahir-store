@@ -80,35 +80,20 @@ interface CategoryCardProps {
 const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
   return (
     <div className="group relative">
-      <div className="bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
+      <div className="relative bg-white rounded-xl shadow-md hover:shadow-xl transition-all duration-300 overflow-hidden">
         {/* Background Image Placeholder */}
         <div
           className={`h-48 bg-gradient-to-br ${category.gradient} relative overflow-hidden`}
         >
-          {/* Icon Overlay */}
-          <div className="absolute inset-0 flex items-center justify-center text-white opacity-20">
-            {category.icon}
-          </div>
-
           {/* Gradient Overlay */}
           <div className="absolute inset-0 bg-black/20"></div>
-
-          {/* Category Icon 
-        <div className="absolute top-4 left-4 p-3 bg-white bg-opacity-20 backdrop-blur-sm rounded-lg text-white">
-          {React.cloneElement(category.icon as React.ReactElement, {
-            size: 24,
-          })}
-        </div>*/}
         </div>
 
         {/* Content */}
-        <div className="p-6">
-          <h3 className="text-xl font-bold text-gray-900 mb-2 group-hover:text-[#54318c] transition-colors">
+        <div className="absolute inset-0 flex justify-center items-center p-6">
+          <h3 className="text-xl font-bold text-white mb-2 group-hover:text-[#54318c] transition-colors text-center">
             {category.title}
           </h3>
-          <p className="text-gray-600 text-sm mb-4 leading-relaxed">
-            {category.description}
-          </p>
         </div>
       </div>
       <div className="mt-4">
