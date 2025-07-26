@@ -3,7 +3,7 @@ import React from "react";
 
 interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: "primary" | "secondary" | "outline";
-  size?: "sm" | "md" | "lg";
+  size?: "2xs" | "xs" | "sm" | "md" | "lg";
   children: React.ReactNode;
   isLoading?: boolean;
 }
@@ -32,6 +32,10 @@ export const Button: React.FC<ButtonProps> = ({
 
   const getSizeClasses = () => {
     switch (size) {
+      case "2xs":
+        return "px-2 py-1 text-xs";
+      case "xs":
+        return "px-3 py-1 text-2xs";
       case "sm":
         return "px-3 py-1.5 text-sm";
       case "md":

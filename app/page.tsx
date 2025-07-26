@@ -1,18 +1,69 @@
 import React, { useState, useEffect } from "react";
-import { Nav } from "@/components/Navigation/Nav";
+import { Navbar } from "@/components/Navigation/Nav";
 import Hero from "@/components/UI/Hero";
-import { Categories } from "@/components/Sections/Categories";
+import { CategoriesSection } from "@/components/Sections/Categories";
 import { Button } from "@/components/UI/Button";
 import { Featured } from "@/components/Sections/Featured";
+import { ProductDetailPage } from "@/components/Product/ProductDetailPage";
+import { CheckoutPage } from "@/components/Checkout/CheckoutPage";
+
+const sampleProduct = {
+  id: "cartier-santos-arabic-dial",
+  name: "Cartier Santos Large Arabic Dial",
+  price: 3799.99,
+  originalPrice: 3999.99,
+  images: [
+    "/products/cartier-santos-arabic-1.jpg",
+    "/products/cartier-santos-arabic-2.jpg",
+  ],
+  rating: 4.9,
+  reviewCount: 156,
+  category: "arabic-dial",
+  description:
+    "The Cartier Santos with elegant Arabic numerals combines French luxury with traditional Eastern aesthetics.",
+  features: [
+    "18-karat gold case",
+    "Arabic numeral dial",
+    "Swiss automatic movement",
+  ],
+  variants: [
+    {
+      id: "gold-white-arabic",
+      name: "Gold Case - White Arabic Dial",
+      value: "Gold with White Arabic Dial",
+      price: 3799.99,
+      inStock: true,
+    },
+  ],
+  specifications: {
+    "Case Diameter": "39.8mm",
+    Movement: "Automatic",
+    Dial: "Arabic Numerals",
+  },
+  inStock: true,
+  isNew: true,
+  isSale: false,
+  metaTitle: "Cartier Santos Large Arabic Dial - Luxury Arabic Numeral Watch",
+  metaDescription: "Exquisite Cartier Santos with Arabic dial numerals",
+  keywords: [
+    "cartier santos arabic dial",
+    "arabic numeral watches",
+    "luxury arabic watches",
+  ],
+};
 
 export default function HomePage() {
   return (
     <>
-      <Nav />
+      <Navbar />
       <Hero />
 
       {/* Categories Section */}
-      <Categories />
+      <CategoriesSection />
+
+      <ProductDetailPage product={sampleProduct} />
+
+      <CheckoutPage />
 
       {/* Featured Products Section */}
       <Featured />
