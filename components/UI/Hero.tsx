@@ -7,7 +7,7 @@ export default function Hero() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative h-[calc(100vh-(h-16))] w-full bg-center z-0">
+      <section className="relative h-[calc(100vh-64px)] md:h-[calc(100vh-88px)] w-full bg-center z-0">
         <div className="absolute -top-16 md:-top-22 left-0 w-full h-[100vh]">
           <Image src={heroImg1} fill alt="Zahir" className="object-cover" />
           {/* Dark overlay for better text contrast */}
