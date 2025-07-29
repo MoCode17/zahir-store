@@ -84,7 +84,9 @@ export default function RootLayout({
         {/* Theme Color */}
         <meta name="theme-color" content="#3d0066" />
         <meta name="msapplication-TileColor" content="#3d0066" />
-
+        {/* Preconnect to Google Fonts */}
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" />
         {/* Preload critical fonts */}
         <link
           rel="preload"
@@ -96,10 +98,11 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800;900&display=swap"
           as="style"
         />
-        <link
+
+        {/* <link
           href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap"
           rel="stylesheet"
-        />
+        /> */}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${tangerine.variable} antialiased`}

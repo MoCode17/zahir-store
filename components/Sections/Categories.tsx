@@ -18,7 +18,7 @@ interface Category {
 const categories: Category[] = [
   {
     id: "1",
-    title: "Luxury",
+    title: "Men's Watches",
     description:
       "Premium timepieces crafted with the finest materials and precious metals",
     icon: <Crown size={32} />,
@@ -29,32 +29,34 @@ const categories: Category[] = [
   },
   {
     id: "2",
-    title: "Sport",
+    title: "Women's Watches",
     description:
       "High-performance watches built for active lifestyles and adventure",
     icon: <Zap size={32} />,
     href: "/collections/sport",
-    image: "/categories/sport.jpg",
+    image:
+      "https://images.pexels.com/photos/32040833/pexels-photo-32040833.jpeg",
     gradient: "from-blue-500 to-cyan-500",
   },
   {
     id: "3",
-    title: "Classic",
+    title: "Arabic Dial",
     description:
       "Timeless designs that never go out of style, perfect for any occasion",
     icon: <Clock size={32} />,
     href: "/collections/classic",
-    image: "/categories/classic.jpg",
+    image: "https://images.pexels.com/photos/2494608/pexels-photo-2494608.jpeg",
     gradient: "from-gray-600 to-gray-800",
   },
   {
     id: "4",
-    title: "Arabic Dial",
+    title: "Quartz",
     description:
       "Elegant watches featuring beautiful Arabic numerals and traditional craftsmanship",
     icon: <Smartphone size={32} />,
     href: "/collections/arabic-dial",
-    image: "/categories/arabic-dial.jpg",
+    image:
+      "https://images.pexels.com/photos/31643523/pexels-photo-31643523.jpeg",
     gradient: "from-purple-500 to-pink-500",
   },
 ];
@@ -68,8 +70,7 @@ export const CategoriesSection: React.FC = () => {
           <h2 className="text-4xl font-bold text-gray-900 mb-4">Categories</h2>
           <p className="text-lg text-gray-600 max-w-2xl mx-auto">
             Discover the perfect watch for every occasion. From luxury
-            timepieces to Arabic dial classics, find your style in our carefully
-            curated collections.
+            timepieces to Arabic dial classics.
           </p>
         </div>
 
@@ -102,12 +103,12 @@ const CategoryCard: React.FC<CategoryCardProps> = ({ category }) => {
           className="object-cover"
         />
         {/* Gradient Overlay */}
-        <div className="absolute inset-0 bg-black opacity-20"></div>
+        <div className="absolute inset-0 bg-black opacity-25"></div>
       </div>
 
       {/* Content */}
-      <div className="absolute inset-0 p-6 flex flex-col items-center justify-center">
-        <h3 className="text-xl font-bold text-white mb-2 group-hover:text-gray-400 transition-colors">
+      <div className="absolute inset-0 p-6 flex items-center justify-center">
+        <h3 className="text-xl font-bold text-white group-hover:text-gray-400 transition-colors roboto-font">
           {category.title}
         </h3>
       </div>
