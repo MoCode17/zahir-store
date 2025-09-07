@@ -19,7 +19,7 @@ export const Navbar: React.FC = () => {
   return (
     <>
       {/* Desktop Nav */}
-      <nav className="hidden md:flex px-8 w-full h-22 bg-transparent gap-4 text-white justify-between items-center md:relative z-20">
+      <nav className="hidden md:flex px-12 w-full h-22 bg-transparent gap-4 text-white justify-between items-center md:relative z-20">
         {/* Logo */}
         <div className="">
           <Link

@@ -143,7 +143,7 @@ export const ProductDetailPage: React.FC<ProductDetailPageProps> = ({
       </Head>
 
       <div className="min-h-screen bg-gray-50 pt-24">
-        <div className="max-w-7xl mx-auto px-4 py-8">
+        <div className="max-w-7xl mx-auto px-8 py-12">
           {/* Breadcrumb */}
           <nav className="mb-8 text-sm">
             <div className="flex items-center space-x-2 text-gray-600">

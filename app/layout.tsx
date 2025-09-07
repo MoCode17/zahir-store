@@ -99,10 +99,10 @@ export default function RootLayout({
           as="style"
         />
 
-        {/* <link
+        <link
           href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&family=Roboto:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&display=swap"
           rel="stylesheet"
-        /> */}
+        />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} ${tangerine.variable} antialiased`}
